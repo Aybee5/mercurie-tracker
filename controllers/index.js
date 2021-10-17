@@ -9,9 +9,10 @@ axios.defaults.data = {
 };
 
 /**
+ * This endpoint takes pickup_location and delivery_location and return the delivery rate information
+ * 
  * @method POST /api/rate
  * 
- * This endpoint takes pickup_location and delivery_location and return the delivery rate information
  * 
  * @param {Number} pickup_latitude - Latitude of the pickup location
  * @param {Number} pickup_longitude - Longitude of the pickup location
@@ -45,9 +46,9 @@ module.exports.getQuoteRate = async (req, res) => {
 };
 
 /**
- * @method POST /api/order
- * 
  * This endpoint takes an order details and creates a delivery order
+ * 
+ * @method POST /api/order
  * 
  * @param {string} pickup_address - Address of the pickup location
  * @param {string} delivery_address - Address of the delivery location
@@ -97,10 +98,10 @@ module.exports.postOrder = async (req, res) => {
 };
 
 /**
- * @method POST /api/order/:id
- * 
  * This endpoint returns the order status of a specific order
  * 
+ * @method POST /api/order/:id
+ *  
  * @param {string} order_id - The id of the order to inqury
  *
  * @returns {Object} - The order details
@@ -123,9 +124,9 @@ module.exports.getOrderStatus = async (req, res) => {
 };
 
 /**
- * @method GET /api/all_orders
- * 
  * This endpont returns all the orders in the database
+ * 
+ * @method GET /api/all_orders
  * 
  * 
  */
